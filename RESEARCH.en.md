@@ -97,7 +97,8 @@ The ratio column is uniformly generated ÷ human; above 1 means generated text u
 |---|---|---|---|---|
 | Zero-anaphora paragraph opening | Not hypothesized; raised in use | gen 0.61%, human 0.14% (non-initial paragraphs) | 4.4× | 11 |
 | Personifying vehicle | Hypothesis was "metaphor packaging abstractions" | gen 0.018, human 0.002 | 7.3× | 7 |
-| Cue colon | "Feels templated" | gen 0.32, human 0.08 | 4.2× | 5 |
+| Colon overuse (cue phrase) | "Feels templated" | gen 0.29, human 0.08 | 3.8× | 5 |
+| Colon overuse (empty line into list) | Not hypothesized | gen 0.29, human 0.03 | 9.4× | 5 |
 | Antithetical construction | "Models love not-A-but-B" | gen 0.73, human 0.22 | 3.4× | 1 |
 | Em dash | "Unique to Claude, ×3" | gen 2.38, human 0.80 | 3.0× | 4 |
 | Opening formula (说白了) | Not quantified | gen 0.025, human 0.008 | 3.2× | 9 |
@@ -126,6 +127,32 @@ The ratio column is uniformly generated ÷ human; above 1 means generated text u
 | Abstract noun with concrete verb | "Time safeguards details, anxiety takes shape" | gen 0.001, human 0.001 | 0.7× | Neither side writes this |
 | Nominalization | "Completed the optimization of…" | gen 0.003, human 0.005 | 0.52× | Humans higher; measuring abstract suffixes instead shows generated text 1.6× higher |
 | In-body ordinals | "GPT 29% vs human 4%" | sentence-initial 首先 gen 0.06, human 0.03 | 2× | Weakest form, and mid-sentence 第一 at 1.2× shows no difference |
+
+### Colons: only meaningful when split by function
+
+One human source uses colons far more heavily than the others, accounting for 77% of all colons in the human corpus and dominating any aggregate. The table below excludes that source; the human side is 189 articles.
+
+Total colon density is 5.30 per thousand characters for generated text against 3.65 for human, a ratio of 1.45. But the two human groups sit at 2.39 and 6.05, one of them above the generated side. Internal variation approaches the human-machine gap, so totals cannot serve as a criterion. Split by function:
+
+| Function | Gen | Human | Ratio | G1 | G2 | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| Cue phrase (核心是：) | 0.29 | 0.08 | 3.78× | 0.06 | 0.11 | 1.8× | include |
+| Empty line into list (几种场景：) | 0.29 | 0.03 | 9.38× | 0.03 | 0.03 | 1.1× | include |
+| Mid-sentence general-to-specific | 3.00 | 1.80 | 1.66× | 0.61 | 4.07 | 6.6× | inconsistent |
+| Bold subheading + colon | 0.43 | 0.26 | 1.66× | 0.10 | 0.56 | 5.7× | inconsistent |
+| Introducing numbered items | 0.87 | 0.62 | 1.40× | 0.80 | 0.27 | 2.9× | insufficient |
+| Definitional (noun + colon) | 1.34 | 0.98 | 1.38× | 0.67 | 1.56 | 2.3× | insufficient |
+| Quotation (speech verb / speaker) | 1.44 | 1.54 | 0.93× | 0.93 | 2.71 | 2.9× | no difference |
+
+Only the first two satisfy both conditions: a sufficient ratio, and near-zero values in both human groups. That combination is what makes "humans essentially do not write this way" a stable basis for attributing a given colon.
+
+**The mid-sentence general-to-specific pattern cannot be measured.** The 1.66 ratio looks like a difference, but the human groups sit at 0.61 and 4.07, a 6.6-fold spread. One writer barely uses it; the other uses it more than the generated side. Given one such colon, its origin is indeterminate. Excluding instances with quotation cues leaves the spread at 6.8×, so the cause is not quotation structure.
+
+This pattern is also a sanctioned use of the colon under GB/T 15834 (following a general statement, to introduce its specifics). Replacing it with a comma loses the hierarchical relation; replacing it with a period severs the correspondence. It is therefore explicitly excluded.
+
+**Subheading colons are a denominator trap.** Per thousand characters the figures are 1.07 against 0.07, a ratio of 15.7; but the generated side carries six times as many subheadings. Recomputed as a share of subheadings: 41.6% against 24.1%, a ratio of only 1.7, with human groups ranging from 7.7% to 62.1% and one above the generated side. As with interrogative subheadings, not included.
+
+Quotation colons account for 41-45% of human colons against 27.6% for generated text. The two sides distribute colon functions differently, but the absolute quotation volume is level (0.93×).
 
 ## Paragraph-level structure
 

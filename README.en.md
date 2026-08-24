@@ -145,7 +145,7 @@ Three results run opposite to popular belief and warrant separate comment.
 | 2 | Dense enumeration commas | gen 3.21 / human 1.78 | 1.8 |
 | 3 | Adjacent-sentence isomorphism | Per hundred paragraphs: gen 9.41 / human 4.81 | 2.0 |
 | 4 | Em dashes | gen 2.38 / human 0.80 | 3.0 |
-| 5 | Cue colons | gen 0.32 / human 0.08 | 4.2 |
+| 5 | Colon overuse | cue phrase gen 0.29 / human 0.08; empty line into list 0.29 / 0.03 | 3.8 / 9.4 |
 | 6 | Ordinals as subheadings | gen 0.19 / human 0.06 | 3.1 |
 | 7 | Personifying vehicles | gen 0.018 / human 0.002 | 7.3 |
 | 8 | Summary overwriting existing data | Numeral density: gen 6.34 / human 17.92 | 0.35 (inverse) |
@@ -225,7 +225,7 @@ Six systematic errors occurred at the operator-design stage. In every case the o
 | Overlong pre-modifiers 3.04 | Operator admitted ordinary constructions | 0.35 |
 | Coordinating conjunctions 0.26 | Rule specifies "twice or more within one sentence"; operator measured single occurrences | 0.00 |
 | 的…的…的 nesting 0.25 | Operator matched across enumeration commas, counting ordinary coordination as nesting | 0.06 |
-| Cue colons, no difference | Of 6,431 matches: 1,266 headings, 1,225 list items, 207 dialogue — all explicitly exempted by the rule | *R* = 4.2 |
+| Cue colons, no difference | Of 6,431 matches: 1,266 headings, 1,225 list items, 207 dialogue, all explicitly exempted by the rule | *R* = 3.8 |
 | Interrogative subheadings 32× | Denominator was character count, ignoring that the generated side has 5–10× as many subheadings | No difference |
 | Figurative packaging 0.000 | Operator was a fixed list of 11 lexical items; actual figurative expressions matched none of them | *R* = 0.42 (human higher) |
 
